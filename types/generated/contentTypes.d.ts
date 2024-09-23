@@ -491,12 +491,14 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'Category';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    type: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    recipes: Schema.Attribute.Relation<'oneToMany', 'api::recipe.recipe'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -528,7 +530,7 @@ export interface ApiRecipeRecipe extends Struct.CollectionTypeSchema {
     body: Schema.Attribute.Text;
     food_item: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     created_date: Schema.Attribute.DateTime;
-    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
