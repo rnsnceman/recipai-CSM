@@ -528,9 +528,9 @@ export interface ApiRecipeRecipe extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     body: Schema.Attribute.Text;
-    food_item: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     created_date: Schema.Attribute.DateTime;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    food_item: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
