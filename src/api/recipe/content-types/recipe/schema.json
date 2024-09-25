@@ -33,6 +33,9 @@
     },
     "ingredients": {
       "type": "text"
+    },
+    "conclusion": {
+      "type": "text"
     }
   }
 }
