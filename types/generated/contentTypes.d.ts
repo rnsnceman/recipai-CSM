@@ -527,10 +527,11 @@ export interface ApiRecipeRecipe extends Struct.CollectionTypeSchema {
   };
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    body: Schema.Attribute.Text;
-    created_date: Schema.Attribute.DateTime;
+    introduction: Schema.Attribute.Text;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     food_item: Schema.Attribute.String;
+    directions: Schema.Attribute.Text;
+    ingredients: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

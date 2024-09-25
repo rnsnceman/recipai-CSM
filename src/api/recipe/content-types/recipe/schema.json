@@ -16,11 +16,8 @@
       "type": "string",
       "required": true
     },
-    "body": {
+    "introduction": {
       "type": "text"
-    },
-    "created_date": {
-      "type": "datetime"
     },
     "category": {
       "type": "relation",
@@ -30,6 +27,12 @@
     },
     "food_item": {
       "type": "string"
+    },
+    "directions": {
+      "type": "text"
+    },
+    "ingredients": {
+      "type": "text"
     }
   }
 }
